@@ -343,3 +343,7 @@ TESTDEC <- ggplot(chs2020_public, aes(x= EDUCATED, y = HealthyGroup))+ geom_area
 plot(TESTDEC)
 TESTDEC <- ggplot(chs2020_public, aes(x= mood1, y = WhitePeoples))+ geom_boxplot()
 plot(TESTDEC)
+
+https://www1.nyc.gov/assets/doh/downloads/pdf/episrv/chs2020-codebook.pdf
+
+https://www1.nyc.gov/site/doh/data/data-sets/community-health-survey-public-use-data.page
