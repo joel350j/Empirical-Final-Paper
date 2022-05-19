@@ -1,0 +1,84 @@
+
+Relationshionship between Health Insurance, Nutrition and Body Mass Index BMI
+=================================================
+                          Dependent variable:    
+                      ---------------------------
+                                insure5          
+-------------------------------------------------
+weightall                       -0.010           
+                                (0.017)          
+                                                 
+BlackPeoples1                    0.101           
+                                (0.077)          
+                                                 
+WhitePeoples1                   -0.105           
+                                (0.075)          
+                                                 
+AsianPeoples1                   0.144*           
+                                (0.079)          
+                                                 
+HispanicPeoples1               0.452***          
+                                (0.076)          
+                                                 
+OtherPeoples1                                    
+                                                 
+                                                 
+ExcellentHealth1               -0.084**          
+                                (0.038)          
+                                                 
+VeryGoodHealth1                -0.154***         
+                                (0.034)          
+                                                 
+FairHealth1                      0.049           
+                                (0.042)          
+                                                 
+PoorHealth1                    -0.150**          
+                                (0.075)          
+                                                 
+educ_hs1                       0.572***          
+                                (0.037)          
+                                                 
+educ_nohs1                     0.870***          
+                                (0.046)          
+                                                 
+educ_smcoll1                   0.298***          
+                                (0.037)          
+                                                 
+educ_collegegraduate1                            
+                                                 
+                                                 
+EmployedforWage1               -0.632***         
+                                (0.076)          
+                                                 
+SelfEmployed1                    0.123           
+                                (0.085)          
+                                                 
+Unemployedless1yr1              0.194**          
+                                (0.083)          
+                                                 
+UnemployedOver1yr1                               
+                                                 
+                                                 
+Homemaker1                       0.092           
+                                (0.098)          
+                                                 
+Student1                        -0.152           
+                                (0.097)          
+                                                 
+Retired1                       -0.445***         
+                                (0.080)          
+                                                 
+UnableToWOrk1                   -0.157*          
+                                (0.090)          
+                                                 
+Constant                       2.184***          
+                                (0.110)          
+                                                 
+-------------------------------------------------
+Observations                     8,250           
+R2                               0.216           
+Adjusted R2                      0.214           
+Residual Std. Error        1.180 (df = 8230)     
+F Statistic           119.386*** (df = 19; 8230) 
+=================================================
+Note:                 *p<0.1; **p<0.05; ***p<0.01

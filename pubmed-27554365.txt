@@ -1,0 +1,94 @@
+PMID- 27554365
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20180105
+LR  - 20220330
+IS  - 1873-2607 (Electronic)
+IS  - 0749-3797 (Linking)
+VI  - 51
+IP  - 6
+DP  - 2016 Dec
+TI  - Disparities in Diabetes by Education and Race/Ethnicity in the U.S., 1973-2012.
+PG  - 947-957
+LID - S0749-3797(16)30248-3 [pii]
+LID - 10.1016/j.amepre.2016.06.019 [doi]
+AB  - INTRODUCTION: Diabetes mellitus incidence has more than doubled in the U.S. over 
+      the past 2 decades. Not all sectors of the population have experienced the 
+      increase proportionally. The goal of this study was to determine if disparities 
+      in diabetes by education and race/ethnicity have increased over time, and if 
+      there are differences by gender and birth cohort. METHODS: Repeated 
+      cross-sectional data were used from the 1973-2012 National Health Interview 
+      Survey of adults aged 25-84 years. Logistic regression models were run and 
+      predicted probabilities were calculated to determine if disparities in 
+      self-reported diabetes by education and race/ethnicity changed over time, by 
+      gender and birth cohort (birth before 1946, 1946-1970, 1971 or after). Analyses 
+      were conducted in 2014-2015. RESULTS: Relationships between education or 
+      race/ethnicity and diabetes were modified by time for people born before 1971, 
+      with stronger effect modification for women than men. Inequalities in diabetes 
+      prevalence grew over time, although the magnitude of disparities was smaller for 
+      the 1946-1970 cohort. For example, in 2005-2012, the gap in diabetes prevalence 
+      for women with the highest and lowest levels of education was 12.7% for pre-1946 
+      versus 7.9% for 1946-1970. Similar trends were seen for differences between 
+      non-Hispanic whites and non-Hispanic blacks or Hispanics. Results were 
+      inconclusive for the youngest cohort. CONCLUSIONS: Diabetes disparities are 
+      evident. Smaller differences in later cohorts may indicate that large structural 
+      changes in society (e.g., Civil Rights movement, increased educational and 
+      economic opportunities) have benefited later generations.
+CI  - Copyright © 2016 American Journal of Preventive Medicine. Published by Elsevier 
+      Inc. All rights reserved.
+FAU - Fleischer, Nancy L
+AU  - Fleischer NL
+AD  - Center for Social Epidemiology and Population Health, Department of Epidemiology, 
+      School of Public Health, University of Michigan, Ann Arbor, Michigan; Department 
+      of Epidemiology and Biostatistics, Arnold School of Public Health, University of 
+      South Carolina, Columbia, South Carolina;. Electronic address: nancyfl@umich.edu.
+FAU - Henderson, Andrea K
+AU  - Henderson AK
+AD  - Department of Sociology, University of South Carolina, Columbia, South Carolina.
+FAU - Wu, Yun-Hsuan
+AU  - Wu YH
+AD  - Department of Epidemiology and Biostatistics, Arnold School of Public Health, 
+      University of South Carolina, Columbia, South Carolina.
+FAU - Liese, Angela D
+AU  - Liese AD
+AD  - Department of Epidemiology and Biostatistics, Arnold School of Public Health, 
+      University of South Carolina, Columbia, South Carolina.
+FAU - McLain, Alexander C
+AU  - McLain AC
+AD  - Department of Epidemiology and Biostatistics, Arnold School of Public Health, 
+      University of South Carolina, Columbia, South Carolina.
+LA  - eng
+PT  - Journal Article
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20160821
+PL  - Netherlands
+TA  - Am J Prev Med
+JT  - American journal of preventive medicine
+JID - 8704773
+SB  - IM
+MH  - Adult
+MH  - Aged
+MH  - Aged, 80 and over
+MH  - Cohort Studies
+MH  - Diabetes Mellitus/*ethnology
+MH  - Educational Status
+MH  - Female
+MH  - Health Status Disparities
+MH  - Humans
+MH  - Male
+MH  - Middle Aged
+MH  - United States/epidemiology
+EDAT- 2016/08/25 06:00
+MHDA- 2018/01/06 06:00
+CRDT- 2016/08/25 06:00
+PHST- 2015/11/12 00:00 [received]
+PHST- 2016/05/25 00:00 [revised]
+PHST- 2016/06/13 00:00 [accepted]
+PHST- 2016/08/25 06:00 [pubmed]
+PHST- 2018/01/06 06:00 [medline]
+PHST- 2016/08/25 06:00 [entrez]
+AID - S0749-3797(16)30248-3 [pii]
+AID - 10.1016/j.amepre.2016.06.019 [doi]
+PST - ppublish
+SO  - Am J Prev Med. 2016 Dec;51(6):947-957. doi: 10.1016/j.amepre.2016.06.019. Epub 
+      2016 Aug 21.
