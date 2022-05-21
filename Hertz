@@ -1,0 +1,130 @@
+library(haven)
+chs2020_public <- read_sas("chs2020_public.sas7bdat", 
+                           NULL)
+View(chs2020_public)
+
+library(tibble)
+library(data.table)
+library(dplyr)
+library(standardize)
+library(Matrix)
+library(MatrixCorrelation)
+library(stringi)
+library(stringr)
+library(ggplot2)
+library(ggplot.multistats)
+library(ggplotAssist)
+library(tidyverse)
+library(tidyr)
+library(tidyselect)
+library(shiny)
+library(shinyAce)
+library(shinyWidgets)
+library(standardize)
+library(StandardizeText)
+library(randomForest)
+library(randomForestExplainer)
+library(stargazer)
+attach(chs2020_public)
+length(chs2020_public)
+list(chs2020_public)
+summary(chs2020_public$generalhealth)
+HealthyGroup <- as.factor(as.numeric(generalhealth == 1 | generalhealth ==2 | generalhealth ==3))
+table(HealthyGroup)
+#Because we have look Thank you Kevin
+str(chs2020_public)
+#LINE 42 SERVES TO  DETERMINE THE CATEGORICAL, LOGICAL AND CONTINUOUS VARIABLES. WE HAVE VERY FEW CONTINOUS VARIABLES. 
+#SO WE NEED TO BUILD NEW VARIABLES THAT WOULD FACILITATE THE OLS AND LOGIST REGRESSION TO DEMONSTRATE OUR HYPOTHESIS.
+ExcellentHealth  <- as.factor(as.numeric(generalhealth ==1))
+table(ExcellentHealth)
+VeryGoodHealth <- as.factor(as.numeric(generalhealth ==2))
+table(VeryGoodHealth)
+GoodHealth <- as.factor(as.numeric(generalhealth ==3))
+table(GoodHealth)
+FairHealth <- as.factor(as.numeric(generalhealth ==4))
+table(FairHealth)
+PoorHealth <- as.factor(as.numeric(generalhealth ==5))
+table(PoorHealth)
+Demographic <- as.factor(as.numeric(chs2020_public$age18_64 >0))
+summary(Demographic)
+table(Demographic)
+BlackPeoples <- as.factor(as.numeric(newrace ==2))
+table(BlackPeoples)
+HispanicPeoples <- as.factor(as.numeric(newrace ==3))
+table(HispanicPeoples)
+WhitePeoples <- as.factor(as.numeric(newrace ==1))
+table(WhitePeoples)
+AsianPeoples <- as.factor(as.numeric(newrace ==4))
+table(AsianPeoples)
+OtherPeoples <-as.factor(as.numeric(newrace ==5))
+table(OtherPeoples)
+educ_nohs <- as.factor(as.numeric(education==1))
+table(educ_nohs)
+educ_hs <- as.factor(as.numeric(education==2))
+table(educ_hs)
+educ_smcoll <- as.factor(as.numeric(education==3))
+table(educ_smcoll)
+educ_collegegraduate <- as.factor(as.numeric(education==4))
+table(educ_collegegraduate)
+EmployedforWage <- as.factor(as.numeric(employment20==1))
+table(EmployedforWage)
+SelfEmployed <- as.factor(as.numeric(employment20==2))
+table(SelfEmployed)
+UnemployedOver1yr <-as.factor(as.numeric(employment20==2))
+table(UnemployedOver1yr)
+Unemployedless1yr <-as.factor(as.numeric(employment20==4))
+table(Unemployedless1yr)
+Homemaker <-as.factor(as.numeric(employment20==5))
+table(Homemaker)
+Student <-as.factor(as.numeric(employment20==6))
+table(Student)
+Retired <-as.factor(as.numeric(employment20==7))
+table(Retired)
+UnableToWOrk <-as.factor(as.numeric(employment20==8))
+table(UnableToWOrk)
+summary(chs2020_public$nutrition46)
+summary(chs2020_public$newrace)
+summary(chs2020_public$generalhealth)
+summary(chs2020_public$employment20)
+summary(chs2020_public$bthcontrollastsex20_q1)
+summary(chs2020_public$maritalstatus20)
+summary(chs2020_public$weightall)
+table(chs2020_public$weightall)
+print(chs2020_public)
+
+
+OLS0 <- lm(insure5 ~ weightall + BlackPeoples + WhitePeoples + AsianPeoples +  HispanicPeoples  + OtherPeoples + ExcellentHealth + VeryGoodHealth + FairHealth + PoorHealth + educ_hs + educ_nohs +  educ_smcoll + educ_collegegraduate + EmployedforWage + SelfEmployed + Unemployedless1yr + UnemployedOver1yr + Homemaker + Student + Retired + UnableToWOrk)
+# "Borough" demonstrates the five boroughs of new York City
+# "nhac" explains the District Public Health Offices in New York City
+OLS0 <- lm(insure5 ~ weightall + BlackPeoples + WhitePeoples + AsianPeoples +  HispanicPeoples  + OtherPeoples + ExcellentHealth + VeryGoodHealth + FairHealth + PoorHealth + educ_hs + educ_nohs +  educ_smcoll + educ_collegegraduate + EmployedforWage + SelfEmployed + Unemployedless1yr + UnemployedOver1yr + Homemaker + Student + Retired + UnableToWOrk)
+summary(OLS0)
+stargazer(OLS0, type = "text", title = "Relationshionship between Health Insurance, Nutrition and BMI", out =  "Relationshionship between Health Insurance, Nutrition and BMI")
+
+
+OLS1 <- lm(imputed_neighpovgroup4_1519 ~ weightall +  insure5 +   BlackPeoples + WhitePeoples + AsianPeoples +  HispanicPeoples +OtherPeoples + 
+             ExcellentHealth + VeryGoodHealth + FairHealth + PoorHealth + 
+             educ_hs + educ_nohs +  educ_smcoll + educ_collegegraduate + 
+             EmployedforWage + SelfEmployed + Unemployedless1yr + UnemployedOver1yr + Homemaker + Student + Retired + UnableToWOrk)
+summary(OLS1)
+stargazer(OLS1, type = "text", title = "Relationship between poverty line based on Zipcodes across the City:" , out = "Relationship between poverty line based on Zipcodes across the City:")
+exp(OLS1$coefficients)
+
+
+OLS2 <- lm(nutrition1 ~weightall + insure5 + BlackPeoples + WhitePeoples + AsianPeoples +  HispanicPeoples +  HispanicPeoples  + OtherPeoples + 
+             ExcellentHealth + VeryGoodHealth + FairHealth + PoorHealth + 
+             educ_hs + educ_nohs +  educ_smcoll + educ_collegegraduate + 
+             EmployedforWage + SelfEmployed + Unemployedless1yr + UnemployedOver1yr + Homemaker + Student + Retired + UnableToWOrk)
+summary(OLS2)
+stargazer(OLS2, type = "text", title = "Relationship between poverty line, BMI based on Zipcodes across the City:")
+exp(OLS2$coefficients)
+
+HealthyGroup <- as.factor(as.numeric(generalhealth == 1 | generalhealth ==2 | generalhealth ==3))
+
+LOGIT2 <- glm(HealthyGroup ~ weightall + insure5 + BlackPeoples + WhitePeoples + HispanicPeoples + PoorHealth
+              +  educ_smcoll + educ_collegegraduate + EmployedforWage + SelfEmployed + Student + Retired, family=binomial)
+summary(LOGIT2)
+
+stargazer(OLS0, OLS1, OLS2, OLS3, LOGIT2, type = "text", front.size = "small", digits = 1, title = "Linear Regressions Outputs", out = "Linear Regressions Outputs" )
+
+
+
